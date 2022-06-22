@@ -8,13 +8,13 @@ if __name__ == '__main__':
     window.withdraw()
     # Put this sentence in a pop-up message box:
     # "If you find yourself having to cross a piranha-infested river, here's how to do it..."
-    messagebox("If you find yourself having to cross a piranha-infested river, here's how to do it...")
+    messagebox.showinfo("If you find yourself having to cross a piranha-infested river, here's how to do it...")
     # Get the player to enter an adjective
     Adjective = simpledialog.askstring(title='Greeter', prompt="Adjective")
     # Get the player to enter a type of liquid
     Liquid = simpledialog.askstring(title='Greeter', prompt="Liquid")
     # Get the player to enter a body part
-    Arm = simpledialog.askstring(title='Greeter', prompt="Arm")
+    Arm = simpledialog.askstring(title='Greeter', prompt="body part")
     # Get the player to enter a verb
     Verb = simpledialog.askstring(title='Greeter', prompt="Verb")
     # Get the player to enter a place
@@ -28,12 +28,12 @@ if __name__ == '__main__':
 
     story = (
         "Piranhas are more " + Adjective + "during the day, so cross the river at\n"
-        "night. Piranhas are attracted to fresh [**type of liquid**] and will most\n"
-        "likely take a bite out of your [**body part**] if you [**verb**]. Whatever\n"
+        "night. Piranhas are attracted to fresh " + Liquid + " and will most\n"
+        "likely take a bite out of your " + Arm + " if you " + Verb + ". Whatever\n"
         "you do, if you have an open wound, try to find another way to get "
-        "back to the [**place**]. Good luck!"
+        "back to the " + place + ". Good luck!"
     )
-
+    messagebox.showinfo(title="Fishing", message="Hello " + story)
     # Make a pop-up that contains the final story. The \n escape characters add
     # line breaks to the story. If you need to, move them around to make your
     # story look better in the pop-up
